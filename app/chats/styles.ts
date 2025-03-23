@@ -1,13 +1,27 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#fff" },
-  header: { paddingHorizontal: 16, paddingBottom: 10, backgroundColor: "#fff" },
-  doneButton: {},
-  doneText: { color: "#007AFF", fontSize: 17, fontWeight: "600" },
-  headerTitle: { fontSize: 32, fontWeight: "bold", marginTop: 20 },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: "#F6F6F6",
+  },
+  editText: {
+    color: "#007AFF",
+    fontSize: 16,
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#000",
+  },
   chatItem: {
     flexDirection: "row",
+    alignItems: "center",
     padding: 15,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
@@ -18,50 +32,60 @@ const styles = StyleSheet.create({
   name: { fontSize: 16, fontWeight: "bold" },
   date: { fontSize: 12, color: "#666" },
   message: { fontSize: 14, color: "#444", marginTop: 3 },
-  swipeActions: { flexDirection: "row", alignItems: "center" },
-  moreButton: {
-    backgroundColor: "#aaa",
-    justifyContent: "center",
-    alignItems: "center",
-    width: 80,
-    height: "100%",
+  checkboxContainer: {
+    marginRight: 10,
   },
-  archiveButton: {
-    backgroundColor: "#007AFF",
-    justifyContent: "center",
+  rightActions: {
+    flexDirection: "row",
     alignItems: "center",
-    width: 80,
-    height: "100%",
-  },
-  actionText: { color: "#fff", fontWeight: "bold" },
-
-  // Modal Styles
-  modalOverlay: {
-    flex: 1,
     justifyContent: "flex-end",
-    backgroundColor: "rgba(0,0,0,0.3)",
-    paddingBottom: 50,
-    paddingLeft: 10,
-    paddingRight: 10,
   },
-  modalContent: {
+  actionButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: 80,
+    height: "100%",
+  },
+  actionText: {
+    color: "#fff",
+    fontSize: 12,
+    marginTop: 5,
+  },
+  actionSheet: {
     backgroundColor: "#fff",
-    borderRadius: 12,
+    borderRadius: 10,
+    paddingVertical: 10,
+    marginHorizontal: 10,
   },
-  modalOption: {
-    padding: 16,
+  sheetItem: {
+    paddingVertical: 15,
     alignItems: "center",
     borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
+    borderBottomColor: "#E5E5E5",
   },
-  modalText: { fontSize: 18, color: "#007AFF" },
-  destructiveText: { color: "red" },
+  sheetText: {
+    fontSize: 16,
+    color: "#007AFF",
+  },
+  deleteText: {
+    color: "red",
+    fontWeight: "600",
+  },
   cancelButton: {
-    padding: 16,
-    alignItems: "center",
     backgroundColor: "#fff",
-    marginTop: 8,
     borderRadius: 12,
+    margin: 10,
+    paddingVertical: 15,
+    alignItems: "center",
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
   },
-  cancelText: { fontSize: 18, color: "#007AFF", fontWeight: "bold" },
+  cancelText: {
+    fontSize: 16,
+    color: "#007AFF",
+    fontWeight: "600",
+  },
 });
